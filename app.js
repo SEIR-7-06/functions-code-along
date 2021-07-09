@@ -21,8 +21,8 @@ const person1 = 'Jane';
 
 
 
-printGreeting(person1);
-printGreeting('Harry');
+// printGreeting(person1);
+// printGreeting('Harry');
 // printGreeting('Yuri');
 
 //////////////////////////////////////////
@@ -48,7 +48,7 @@ function printDailyGreeting(firstName, dayOfWeek) {
 const firstPerson = 'Harry';
 const secondPerson = 'Jane';
 
-printDailyGreeting(firstPerson, 'Saturday');
+// printDailyGreeting(firstPerson, 'Saturday');
 // printDailyGreeting(secondPerson, 'Saturday');
 
 ///////////////////////////////////////////////
@@ -67,7 +67,7 @@ const personInput = 'Jane';
 const itemInput = 'spaghetti';
 const tableNumber = 2;
 
-printOrder(personInput, itemInput, tableNumber);
+// printOrder(personInput, itemInput, tableNumber);
 
 /////////////////////////////////////////////////////////////////////
 // HAVING A FUNCTION RETURN A VALUE
@@ -78,7 +78,7 @@ function getTheSum(a, b) {
 
 const sum = getTheSum(1, 2);
 
-console.log(sum);
+// console.log(sum);
 
 const totalApples = 20;
 const totalOranges = 30;
@@ -86,7 +86,7 @@ const totalOranges = 30;
 
 const numberOfFruits = getTheSum(totalApples, totalOranges);
 
-console.log(numberOfFruits);
+// console.log(numberOfFruits);
 
 /////////////////////////////////////////////////
 
@@ -105,7 +105,7 @@ const item2Date = 'next Monday';
 const amazon = getAdMessage(item1Name, item1Price, item1Date);
 const amazon2 = getAdMessage(item2Name, item2Price, item2Date);
 
-console.log(amazon);
+// console.log(amazon);
 
 /////////////////////////////////////////////////
 // breakfastItem, dayOfWeek, rating
@@ -115,7 +115,7 @@ function getBreakfastMessage(breakfastItem, dayOfWeek, rating) {
 
 const message = getBreakfastMessage('omelette', 'Friday', 5);
 
-console.log(message);
+// console.log(message);
 
 //////////////////////////////////////////////////////
 
@@ -125,9 +125,9 @@ function sayHi() {
   return 'hi';
 }
 
-const hiMessage = sayHi();
+// const hiMessage = sayHi();
 
-console.log(hiMessage);
+// console.log(hiMessage);
 
 /////////////////////////////////////////////////////
 // FUNCTIONS WITH CONDITIONALS (if/else statements)
@@ -145,7 +145,7 @@ function getFoodMessage(hasFood) {
 
 let hasFood = false;
 
-console.log(getFoodMessage(hasFood));
+// console.log(getFoodMessage(hasFood));
 
 /////////////////////////////////////////////////
 
@@ -170,6 +170,43 @@ function getLoginMessage(isAdmin, isLoggedIn) {
   }
 }
 
-console.log(getLoginMessage(userIsAdmin, userIsLoggedIn));
+// console.log(getLoginMessage(userIsAdmin, userIsLoggedIn));
 
 /////////////////////////////////////////////////////
+// COMBINE FUNCTIONS WITH LOOPS
+
+const students = [
+  'Jill',
+  'Harold',
+  'Manny',
+  'Jamie'
+];
+
+function printStudents() {
+  for (let i = 0; i < students.length; i++) {
+    console.log(students[i]);
+  }
+}
+
+printStudents();
+
+//////////////////////////////////////////
+// Function that checks if a student exists in
+// the list
+
+function checkForStudent() {
+  for (let i = 0; i < students.length; i++) {
+    if (students[i] === 'Manny') {
+      console.log('the student is Manny ==>', students[i]);
+      return true;
+    } else {
+      console.log('the student is not Manny ==>', students[i]);
+    }
+  }
+
+  console.log('We didnt find Manny :(');
+
+  return false;
+}
+
+console.log(checkForStudent());
